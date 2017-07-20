@@ -117,7 +117,10 @@ void getopts(int argc, char** argv)
 		else if (strcmp(argv[count], "--proxy_connection") == 0)
 		{
 			if (++count < argc)
-				options.proxy_connection = argv[count];
+        {
+				  options.proxy_connection = argv[count];
+          printf("\nSetting proxy connection to %s\n", options.proxy_connection);
+        }
 			else
 				usage();
 		}
